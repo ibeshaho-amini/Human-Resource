@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+<section>
+  <div class="imgae">
+    <a href="index.html"><img src="img/back-arrow.png" alt=""></a>
+  </div>
+<form id="signupForm" onsubmit="validateForm(event)">
+  <h2>Registration Form</h2>
+  <label for="firstName">Names</label> <br>
+  <input type="text" id="firstName" name="First Name"  placeholder="First Name" required>
+  <input type="text" id="lastName" name="Last Name" placeholder="Last Name" required>
+  <br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="Email" required style="width: 600px;">
+  <br><br>
+  <label for="password">Password</label><br>
+  <input type="password" id="password" name="password" minlength="6" placeholder="Password" required>
+  
+  <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="Confirm Password" required>
+  <br><br>
+  <label for="phone">Phone</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required style="width: 600px;">
+  <br><br>
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address" placeholder="Street Address" required style="width: 600px;">
+<br>
+  <input type="text" id="city" name="city" placeholder="City" required style="width: 600px;">
+  <br>
+  <input type="text" id="state" name="state" placeholder="State" required style="width: 600px;">
+  <br><br>
+  <label for="zip">ZIP Code:</label><br>
+  <input type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter 5-digit ZIP code" required style="width: 600px;">
+<br><br>
+  <button type="submit">Sign Up</button>
+  <div class="register-link">
+    <p>already have an account? <a href="login.html"> Login Here</a></p>
+</div>
+</form>
+</section>
+
+<script>
+  function validateForm(event) {
+    event.preventDefault();
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const state = document.getElementById('state').value.trim();
+    const zip = document.getElementById('zip').value;
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match');
+      return;
+    }
+
+    alert('Form submitted successfully!');
+  }
+</script>
+
+</body>
+</html>

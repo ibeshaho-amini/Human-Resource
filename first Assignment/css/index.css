@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Times New Roman';
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    float: left;
+    margin-left: -300px;
+    margin-top: 30px;
+}
+.logo h2{
+    font-size: 2rem;
+    color: #fff;
+    
+}
+.logo h2 span{
+    color: rgb(105, 176, 227);
+    font-size: 4rem;
+}
+section{
+    height: 100vh;
+    background: url('img/b.jpeg') no-repeat;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    z-index: 2;
+}
+section::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(59, 58, 58);
+    opacity: .7;
+    z-index: -2;
+}
+.first{
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 300px;
+    font-size: 3rem;
+    color: #fff;
+    justify-content: space-between;
+}
+.first p{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: aliceblue;
+}
+
+.last{
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 350px;
+}
+
+.last button{
+    width: 150px;
+    height: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.last .sign{
+    border: 2px solid rgb(105, 176, 227);
+    background: transparent;
+    color: #fff;
+}
+.last a{
+    text-decoration: none;
+}
+.last .sign:hover{
+    background: rgb(105, 176, 227);
+    transition: all 1s ease-in;
+}
+.last .log{
+    color: #fff;
+    background: rgb(105, 176, 227);
+    border: 2px solid rgb(105, 176, 227);
+}
